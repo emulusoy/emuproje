@@ -19,7 +19,7 @@ namespace eMuStock.Controllers
         public IActionResult Add(Product product)
         {
             var products = LoadProducts();
-            product.Id = products.Count > 0 ? products[^1].Id + 1 : 1; // Yeni ID
+            product.Id = products.Count > 0 ? products[^1].Id + 1 : 1;
             products.Add(product);
             SaveProducts(products);
             return RedirectToAction("Index");
@@ -43,6 +43,26 @@ namespace eMuStock.Controllers
                     products.Remove(product);
                 }
 
+                SaveProducts(products);
+            }
+
+            return RedirectToAction("Index");
+        }
+
+        [HttpPost]
+        public IActionResult Increase(int id, int quantity)
+        {
+            if (quantity <= 0)
+            {
+                return RedirectToAction("Index");
+            }
+
+            var products = LoadProducts();
+            var product = products.FirstOrDefault(p => p.Id == id);
+
+            if (product != null)
+            {
+                product.Stock += quantity;
                 SaveProducts(products);
             }
 

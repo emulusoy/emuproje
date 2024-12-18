@@ -137,10 +137,15 @@
                         }
                     </td>
                     <td>
-                        <form asp-action="Delete" method="post">
+                        <form asp-action="Delete" method="post" style="display: inline;">
                             <input type="hidden" name="id" value="@product.Id" />
                             <input type="number" name="quantity" min="1" placeholder="Adet" />
                             <button type="submit">Sil</button>
+                        </form>
+                        <form asp-action="Increase" method="post" style="display: inline;">
+                            <input type="hidden" name="id" value="@product.Id" />
+                            <input type="number" name="quantity" min="1" placeholder="Adet" />
+                            <button type="submit" style="background-color: #007bff; color: white;">Ekle</button>
                         </form>
                     </td>
                 </tr>

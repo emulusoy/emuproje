@@ -60,3 +60,4 @@ C:\Users\Mustafa ulusoy\Desktop\emuproje\obj\Debug\net8.0\refint\emuproje.dll
 C:\Users\Mustafa ulusoy\Desktop\emuproje\obj\Debug\net8.0\emuproje.pdb
 C:\Users\Mustafa ulusoy\Desktop\emuproje\obj\Debug\net8.0\emuproje.genruntimeconfig.cache
 C:\Users\Mustafa ulusoy\Desktop\emuproje\obj\Debug\net8.0\ref\emuproje.dll
+C:\Users\Mustafa ulusoy\Desktop\emuproje\obj\Debug\net8.0\emuproje.sourcelink.json
